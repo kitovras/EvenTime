@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTIME</title>
+
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/custom-scripts.js"></script>
+
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/custom-styles.css">
+</head>
+
+<body>
+    <div id="topAnchor" class="invisible"></div>
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="row" style="margin-top: 45px;">
+                    <div class="col-3">
+                        <a class="btn" style="margin-top: -15px;">
+                            <span class="font-etna" style="font-size: 30px; font-weight: 100;">EVENTIME</span>
+                        </a>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="ms-5">
+                            <button class="btn ms-1" style="position: absolute; ">
+                                <span class="icon-search text-gray"></span>
+                            </button>
+
+                            <input class="form-control cnt-border-1 text-gray"
+                                style="display: inline-block; padding-left: 45px; background-color: #f2f2f2; border: 0px;"
+                                type="text" placeholder="Место" />
+                        </div>
+                    </div>
+
+                    <div class="col-5 text-end">
+                        <button class="btn cnt-border-2 gray">
+                            <span class="m-3">Белгород</span>
+                        </button>
+
+                        <button class="btn cnt-border-2 gray ms-2">
+                            <span class="m-3">Вход и регистрация</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <button class="btn cnt-border-2 grey-2 ms-2">
+                    <span class="fs-cust-3 text-center ms-2 me-2">Кальянные</span>
+                </button>
+
+                <button class="btn cnt-border-2 grey-2 ms-2">
+                    <span class="fs-cust-3 text-center ms-2 me-2">Рестораны</span>
+                </button>
+
+                <button class="btn cnt-border-2 grey-2 ms-2">
+                    <span class="fs-cust-3 text-center ms-2 me-2">Бары</span>
+                </button>
+
+                <button class="btn cnt-border-2 grey-2 ms-2">
+                    <span class="fs-cust-3 text-center ms-2 me-2">Кафе</span>
+                </button>
+
+                <button class="btn cnt-border-2 grey-2 ms-2">
+                    <span class="fs-cust-3 text-center ms-2 me-2">Мероприятия</span>
+                </button>
+
+                <button class="btn cnt-border-2 grey-2 ms-2">
+                    <span class="fs-cust-3 text-center ms-2 me-2">Досуг пространства</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="cardDetails" class="row" style="display: none;">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <a class="btn no-focus-outline text-center ms-2 mt-2 mb-2" style="border-radius: 50%; background-color: white; box-shadow: 0px 1px 7px rgb(0 0 0 / 10%)" onclick="cardDetailsVisible(false)">
+                            <span class="icon-angle-left pe-2 ps-1" style="font-size: 25px;"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="border: 0px">
+                            <img class="ms-2 img-fluid" src="../images/CardImageDefault.png">
+
+                            <div class="card-img-overlay text-white d-flex align-items-start justify-content-end">
+                                <img src="../images/Energy.png" width="40px" height="40px" />
+                            </div>
+
+                            <div class="card-img-overlay text-white d-flex align-items-end">
+                                <label class="ms-5 mb-4" style="font-weight: 600; font-size: 36px;">Название мероприятия</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <label class="ms-2 mt-3" style="font-weight: 650; font-size: 24px;">О мероприятии</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="ms-2">
+                            <span>
+                                ххх ххх хххх хххх  ххх  ххххх   хххххххх  ххххх ххххх  ххххх хх  хххххх хххххххххххх ххххххх  
+                                хххххх хххххх ххххх ххх ххххххххххххх ххххххх ххххххх ххх ххх хххх хххх  ххх  ххххх   хххххххх 
+                                ххххх ххххх  ххххх хх  хххххх хххххххххххх ххххххх  ххххххх хххххх ххххх ххх ххххххххххххх ххххххх ххххххх
+                                ххх ххх хххх хххх  ххх  ххххх   хххххххх  ххххх ххххх  ххххх хх  хххххх хххххххххххх ххххххх  ххххххх
+                                хххххх ххххх ххх ххххххххххххх ххххххх ххххххх ххх ххх хххх хххх  ххх  ххххх   хххххххх  ххххх ххххх  
+                                ххххх хх  хххххх хххххххххххх ххххххх  ххххххх хххххх ххххх ххх ххххххххххххх ххххххх ххххххх
+                                хххххххх  ххххх ххххх  ххххх хх  хххххх хххххххххххх ххххххх  ххххххх хххххх ххххх ххх 
+                                ххххххххххххх ххххххх ххххххх ххх ххх хххх хххх  ххх  ххххх   хххххххх  ххххх ххххх  ххххх хх  хххххх хххххххххххх ххххххх  
+                                ххх ххх хххх хххх  ххх  ххххх   хххххххх  ххххх ххххх  ххххх хх  хххххх хххххххххххх ххххххх 
+                                 ххххххх хххххх ххххх ххх ххххххххххххх ххххххх ххххххх ххх ххх хххх хххх  ххх  ххххх   хххххххх  ххххх ххххх  
+                                 ххххх хх  хххххх хххххххххххх ххххххх  ххххххх хххххх ххххх ххх ххххххххххххх ххххххх ххххххх
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <label class="ms-2 mt-3" style="font-weight: 650; font-size: 24px;">О мероприятии</label>
+                    </div>
+                </div>
+
+                <div class="row mb-5 mt-3">
+                    <div class="col-12">
+                        <div class="ms-2">
+                            <span style="border-radius: 15px;padding-top: 5px;padding-bottom: 5px;padding-right: 25px;padding-left: 25px;border: 1.5px solid #d9d9d9;">Тэг-1</span>
+                            <span class="ms-3" style="border-radius: 15px;padding-top: 5px;padding-bottom: 5px;padding-right: 25px;padding-left: 25px;border: 1.5px solid #d9d9d9;">Тэг-2</span>
+                            <span class="ms-3" style="border-radius: 15px;padding-top: 5px;padding-bottom: 5px;padding-right: 25px;padding-left: 25px;border: 1.5px solid #d9d9d9;">Тэг-3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="ms-2" style="border: 2px solid#d9d9d9; border-radius: 10px;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label class="ms-3 mt-2" style="font-weight: 650; font-size: 20px;">Smoke House</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="ms-3 text-secondary" style="font-size: 14px;">Адрес</span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <div class="row mb-2">
+                                        <div class="col-3">
+                                            <div class="ps-3">
+                                                <span>Славы просп., 90А, <br>Белгород</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-9">
+                                            <span class="text-secondary" style="font-size: 14px;">Адрес <br><span style="color: black;">(xxx) xxx-xx-xx</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="row">
+                <div class="col-12">
+                    <!--Этот блок для задачи 4-->
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" onclick="cardDetailsVisible(true)" style="border: 0px">
+                                <img class="ms-2 img-fluid" src="../images/CardImageDefaultMini.png">
+
+                                <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                    <img src="../images/energy.png" width="25px" height="25px" />
+                                </div>
+                                
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="bd-hightlight">
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Для взрослых мальчиков</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">5+</span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="card-title text-decoration-none text-body fw-bold">Название мероприятия</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                           <span class="text-secondary" style="font-size: 12px">Текст, кратко описывающий мероприятие: что за событие, место проведения.</span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" onclick="cardDetailsVisible(true)" style="border: 0px">
+                                <img class="ms-2 img-fluid" src="../images/CardImageDefaultMini.png">
+
+                                <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                    <img src="../images/energy.png" width="25px" height="25px" />
+                                </div>
+                                
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="bd-hightlight">
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Для взрослых мальчиков</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">5+</span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="card-title text-decoration-none text-body fw-bold">Название мероприятия</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                           <span class="text-secondary" style="font-size: 12px">Текст, кратко описывающий мероприятие: что за событие, место проведения.</span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" onclick="cardDetailsVisible(true)" style="border: 0px">
+                                <img class="ms-2 img-fluid" src="../images/CardImageDefaultMini.png">
+
+                                <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                    <img src="../images/energy.png" width="25px" height="25px" />
+                                </div>
+                                
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="bd-hightlight">
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Для взрослых мальчиков</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">5+</span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="card-title text-decoration-none text-body fw-bold">Название мероприятия</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                           <span class="text-secondary" style="font-size: 12px">Текст, кратко описывающий мероприятие: что за событие, место проведения.</span> 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    
+            <div class="row mt-3">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" onclick="cardDetailsVisible(true)" style="border: 0px">
+                                <img class="ms-2 img-fluid" src="../images/CardImageDefaultMini.png">
+
+                                <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                    <img src="../images/energy.png" width="25px" height="25px" />
+                                </div>
+                                
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="bd-hightlight">
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Для взрослых мальчиков</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">5+</span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="card-title text-decoration-none text-body fw-bold">Название мероприятия</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                           <span class="text-secondary" style="font-size: 12px">Текст, кратко описывающий мероприятие: что за событие, место проведения.</span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" onclick="cardDetailsVisible(true)" style="border: 0px">
+                                <img class="ms-2 img-fluid" src="../images/CardImageDefaultMini.png">
+
+                                <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                    <img src="../images/energy.png" width="25px" height="25px" />
+                                </div>
+                                
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="bd-hightlight">
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Для взрослых мальчиков</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">5+</span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="card-title text-decoration-none text-body fw-bold">Название мероприятия</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                           <span class="text-secondary" style="font-size: 12px">Текст, кратко описывающий мероприятие: что за событие, место проведения.</span> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card" onclick="cardDetailsVisible(true)" style="border: 0px">
+                                <img class="ms-2 img-fluid" src="../images/CardImageDefaultMini.png">
+
+                                <div class="card-img-overlay d-flex align-items-start justify-content-end">
+                                    <img src="../images/energy.png" width="25px" height="25px" />
+                                </div>
+                                
+                                <div class="card-img-overlay d-flex align-items-end">
+                                    <div class="bd-hightlight">
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Бесплатно</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">Для взрослых мальчиков</span>
+                                        <span class="pt-1 pb-1 ps-3 pe-3 mt-2" style="border-radius: 30px; background-color: white; font-size: 12px; display: inline-block">5+</span>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="card-title text-decoration-none text-body fw-bold">Название мероприятия</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                           <span class="text-secondary" style="font-size: 12px">Текст, кратко описывающий мероприятие: что за событие, место проведения.</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="moveUp" style="display: block; position: fixed; bottom: 30px; right: 60px;">
+            <a href="#topAnchor" class="btn no-focus-outline text-center" style="border-radius: 50%; background-color: white; box-shadow: 0 2px 5px rgb(0 0 0 / 30%)">
+                <span class="icon-angle-up text-gray pl-2" style="font-size: 25px;"></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

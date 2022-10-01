@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-wight, initial-scale=1.0">
+        <title>DataEntry</title>
+    
+        <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../bootstrap/js/custom-scripts.js"></script>
+    
+        <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../bootstrap/css/custom-styles.css">
+    </head>
+    
+    <body>
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-12">
+                            <buttom type="buttom" class="me-3 btn btn-outline-secondary no-focus-outline"
+                            data-bs-toggle="modal" data-bs-target="#addOrganizationWindow">Добавить организацию</buttom>
+
+                            <buttom type="buttom" class="ms-3 btn btn-outline-secondary no-focus-outline"
+                            data-bs-toggle="modal" data-bs-target="#addEventWindow">Добавить мероприятие</buttom>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 mb-3 me-3">
+                <div class="col-3 me-3">
+                    <label class="fw-1 fs-cust-4">Наименование организации</label>
+                    <input class="form-control no-focus-outline" style="display: inline-block;" type="text" />
+                </div>
+
+                <div class="col-3 me-3">
+                    <label class="fw-1 fs-cust-4">Адрес организации</label>
+                    <input class="form-control no-focus-outline" style="display: inline-block;" type="text" />
+                </div>
+
+                <div class="col-3 me-3">
+                    <label class="fw-1 fs-cust-4">Категория</label>
+                    <select class="form-select text-center no-focus-outline">
+                        <option>Все</option>
+                        <option>Кальянные</option>
+                        <option>Рестораны</option>
+                        <option>Бары</option>
+                        <option>Кафе</option>
+                        <option>Мероприятия</option>
+                        <option>Досуг пространства</option>
+                    </select>
+                </div>
+
+                <div class="col-3"></div>
+            </div>
+
+            <div class="row mt-5 mb-5 me-3">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col" class="text-center">Id</th>
+                                <th scope="col" class="text-center">Логотип</th>
+                                <th scope="col" class="text-center">Наименование</th>
+                                <th scope="col" class="text-center">Адрес</th>
+                                <th scope="col" class="text-center">Категория</th>
+                                <th scope="col" class="text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="col">1</th>
+                                <td scope="col">Какое-то<br>изображение</td>
+                                <td scope="col" class="fw-1">Gorchizza Band</td>
+                                <td scope="col" class="fw-1 text-wrap">Адрес: Славы просп., 90А, Белгород</td>
+                                <td scope="col">Бары</td>
+                                <td scope="col" class="text-center mt-2 mb-2">
+                                    <button class="fw-1 btn no-focus-outline btn-outline-primary">Редактировать</button><br>
+                                    <button class="mt-2 fw-1 btn no-focus-outline btn-outline-danger" style="width: 140px;">Удалить</button>
+                                </td>
+                            </tr>
+                            <tr class="table align-middle">
+                                <th scope="col">...</th>
+                                <td scope="col">...</td>
+                                <td scope="col" class="fw-1">...</td>
+                                <td scope="col" class="fw-1">...</td>
+                                <td scope="col">...</td>
+                                <td scope="col">...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row mt-5 mb-3 me-3">
+                <div class="col-3 me-3">
+                    <label class="fw-1 fs-cust-4">Название мероприятия</label>
+                    <input class="form-control no-focus-outline" style="display: inline-block;" type="text" />
+                </div>
+
+                <div class="col-3 me-3">
+                    <label class="fw-1 fs-cust-4">Время проведения</label>
+                    <input class="form-control no-focus-outline" style="display: inline-block;" type="date" />
+                </div>
+
+                <div class="col-3 me-3">
+                    <label class="fw-1 fs-cust-4">Филиал</label>
+                    <select class="form-select text-center no-focus-outline">
+                        <option>Все</option>
+                    </select>
+                </div>
+
+                <div class="col-3"></div>
+            </div>
+
+            <div class="row mt-5 mb-5 me-3">
+                <div class="col-12">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col" class="text-center">Обложка</th>
+                                <th scope="col" class="text-center">Название</th>
+                                <th scope="col" class="text-center">Стоимость</th>
+                                <th scope="col" class="text-center">Дата и время</th>
+                                <th scope="col" class="text-center">Филиал</th>
+                                <th scope="col" class="text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th spope="col">1</th>
+                                <td scope="col">Изображение</td>
+                                <td scope="col" class="fw-1 text-wrap">Кофейный самелье</td>
+                                <td scope="col">120руб за вход</td>
+                                <td scope="col" class="text-wrap">25.02.2022 14:35</td>
+                                <td scope="col" class="fw-1">Gorchizza Bang</td>
+                                <td scope="col" class="text-center mt-2 nb-2">
+                                    <button class="fw-1 btn no-focus-outline btn-outline-primary">Редактировать</button><br>
+                                    <button class="fw-1 mt-2 btn no-focus-outline btn-outline-danger" style="width: 140px;">Удалить</button>
+                                </td>
+                            </tr>
+                            <tr class="table align-middle">
+                                <th scope="col">...</th>
+                                <td scope="col">...</td>
+                                <td scope="col" class="fw-1">...</td>
+                                <td scope="col">...</td>
+                                <td scope="col">...</td>
+                                <td scope="col" class="fw-1">...</td>
+                                <td scope="col">...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    <!--Модальное окно добавить организацию-->
+    <div class="modal fade" id="addOrganizationWindow" tabindex="-1" data-bs-backdrop="static" aria-hidder="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered" style="max-width: 570px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close no-focus-outline mt-3 mb-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div style="border-radius: 12px;">
+                                <div class="row ms-2 me-2 mt-3 mb-3">
+                                    <div class="col-3">
+                                        <img src="../images/ImageNotFound.jpg" style="border-radius: 50px; width: 100%; height: 100%;" />
+                                    </div>
+                
+                                    <div class="col-9">
+                                        <div class="row ms-1 mt-1">
+                                            <div class="col-12">
+                                                <span class="fs-cust-3 fw-1">Логотип заведения</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row ms-1 mt-2">
+                                            <div class="col-12">
+                                                <span class="fs-cust-2">Формат PNG или JPG, не более 3-х мегабайт</span>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <button class="btn no-focus-outline fs-cust-3" style="color: #7461ed;">Загрузить фото</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">Наименование заведения</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px;" type="text" />
+                                    </div>
+                                </div>
+                
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">ИНН организации</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+                                </div>
+                
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">Адрес заведения</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+                                </div>
+                
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">Контактный номер телефона (необязательное поле)</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+                                </div>
+                
+                                <div class="row ms-2 mt-3 mb-3">
+                                    <div class="col-10">
+                                        <label class="fs-cust-3 fw-1">Категория заведения</label>
+                                        <select class="form-select text-center no-focus-outline" style="border-radius: 15px">
+                                            <option>Все</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-2"></div>
+                                </div>
+                
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">Электронная почта (необязательное поле)</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-5 mb-3 ms-2">
+                                    <div class="col-12">
+                                        <buttom class="btn" style="background-color: #d9d9d9; border-radius: 15px;">
+                                            <span class="ms-4 me-4">Зарегистрироваться</span>
+                                        </buttom>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Модальное окно добавить мероприятие-->
+    <div class="modal fade" id="addEventWindow" tabindex="-1" data-bs-backdrop="static" aria-hidder="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered" style="max-width: 570px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close no-focus-outline mt-3 mb-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div style="border-radius: 12px;">
+                                <div class="row mt-3 ms-2">
+                                    <div class="col-7">
+                                        <img src="../images/ImageNotFound.jpg" style="width: 100%; height: 100%;" />
+                                    </div>
+
+                                    <div class="col-5"></div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-4">
+                                    <div class="col-12">
+                                        <span class="fs-cust-2 fw-1 text-grey-2">формат PNG или JPG</span>
+                                    </div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">Название мероприятия</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <label class="fs-cust-3 fw-1">Описание мероприятия</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-3 me-2">
+                                    <div class="col-12">
+                                        <span class="fs-cust-3 fw-1">Возрастные ограничения</span>
+                                    </div>
+                                </div>
+
+                                <div class="row ms-4 mt-3 mb-3">
+                                    <div class="col-2">
+                                        <div class="text-center" style="background-color: white; border: 1px solid #d9d9d9; border-radius: 15px; padding-top: 7px; padding-bottom: 7px;">
+                                            <span class="fs-cust-3">5+</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="text-center" style="background-color: white; border: 1px solid #d9d9d9; border-radius: 15px; padding-top: 7px; padding-bottom: 7px;">
+                                            <span class="fs-cust-3">10+</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="text-center" style="background-color: white; border: 1px solid #d9d9d9; border-radius: 15px; padding-top: 7px; padding-bottom: 7px;">
+                                            <span class="fs-cust-3">18+</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4"></div>
+
+                                    <div class="col-2"></div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-3">
+                                    <div class="col-4">
+                                        <label class="fs-cust-3 fw-1">Стоимость от</label>
+                                        <input class="form-control no-focus-outline" style="display: inline-block; border-radius: 15px" type="text" />
+                                    </div>
+
+                                    <div class="col-6"></div>
+
+                                    <div class="col-2"></div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-3">
+                                    <div class="col-6">
+                                        <label class="fs-cust-3 fw-1">Дата</label>
+                                        <input class="form-control text-center no-focus-outline fw-1" style="display: inline-block; border-radius: 15px" type="date" />
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label class="fs-cust-3 fw-1">Время</label>
+                                        <input class="form-control text-center no-focus-outline fw-1" style="display: inline-block; border-radius: 15px" type="time" />
+                                    </div>
+
+                                    <div class="col-2"></div>
+                                </div>
+
+                                <div class="row ms-2 mt-3 mb-3">
+                                    <div class="col-10">
+                                        <label class="fs-cust-3 fw-1">Выберите локацию</label>
+                                        <select class="form-select text-center no-focus-outline" style="border-radius: 15px"></select>
+                                    </div>
+
+                                    <div class="col-2"></div>
+                                </div>
+
+                                <div class="row mt-5 mb-3 ms-2">
+                                    <div class="col-12">
+                                        <button class="btn no-focus-outline" style="border: 1px solid #d9d9d9; border-radius: 15px">Опубликовать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

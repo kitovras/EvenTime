@@ -1,0 +1,98 @@
+/*Стили для расширенного контейнера*/
+.custom-container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1px) {
+    .custom-container {
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-container {
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .custom-container {
+        max-width: 1260px;
+    }
+}
+/*Стили для расширенного контейнера*/
+
+/*Стили для кнопок*/
+.cnt-border-1 {
+    border-radius: 30px; 
+}
+
+.cnt-border-2 {
+    border: 1px solid; 
+    border-radius: 30px; 
+}
+
+.cnt-border-2.gray{
+    border-color: #7f7f7f;
+}
+
+.cnt-border-2.grey-2{
+    border-color: #D9D9D9;
+}
+
+.text-gray{
+    color: #a6a6a6;
+}
+
+.text-grey-2 {
+    color: #7f7f7f;
+}
+/*Стили для кнопок*/
+
+/*Стилизуем текст в placeholder*/
+input::placeholder {
+    color: #a6a6a6 !important;
+    font-size: 15px;
+}
+
+/*Плавное скрытие placeholder при фокусе*/
+input:focus::-webkit-input-placeholder {
+    opacity: 0; 
+    transition: opacity 1s ease;
+}
+
+/*Шрифты*/
+@font-face {
+    font-family: "etna";
+    src: url("../../font-awesome/font/etna-free-font.otf") format("opentype");
+}
+
+.font-etna {
+    font-family: "etna";
+}
+
+.fw-1 {
+    font-weight: 650;
+}
+
+.fs-cust-2 {
+    font-size: 14px;
+}
+
+.fs-cust-3 {
+    font-size: 16px;
+}
+
+.fs-cust-4 {
+    font-size: 18px;
+}
+/*Шрифты*/
+
+/*Убираем обводку у кнопки*/
+.no-focus-outline:focus {
+    box-shadow: 0 0 0 0 rgba(0,123,255,0) !important;
+}
